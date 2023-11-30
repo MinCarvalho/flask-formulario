@@ -8,7 +8,8 @@ from flask import render_template, redirect, url_for, request
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'ljjr1989jjlyyaf'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///checklist.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
+
 
 db = SQLAlchemy(app)
 csrf = CSRFProtect(app)
