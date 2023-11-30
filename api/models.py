@@ -1,4 +1,4 @@
-from api import db
+from api.app import db
 
 class Questionario(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)

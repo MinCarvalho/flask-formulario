@@ -1,5 +1,5 @@
 from flask import render_template, redirect, url_for
-from api import app, db
+from api.app import app, db
 from api.models import Questionario, QuestionarioExterno
 from api.form import QuestionForm, QuestionExternoForm
 

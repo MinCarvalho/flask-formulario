@@ -1,3 +1,3 @@
-from api import app
+from api.app import app
 
 app.run(debug=True)
