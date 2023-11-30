@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Detalhes do Questionário</title>
+</head>
+<body>
+
+    <br>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            
+        </ul>
+    </nav>
+    
+    <h1>DETALHES DO QUESTIONARIO</h1>
+
+    <div class="container">
+
+        <div class="form-detalhe">   
+            <p>{{ questionarioExterno.nome }}</p> <br><br>
+            <h2>Externo:</h2><br>
+            <h2>Funcionalidade</h2>
+            
+            <label>{{ questionarioExterno.pexterna1 }}</label>
+            <p>{{ questionarioExterno.qexterna1 }}</p>
+            
+            <label>{{ questionarioExterno.pexterna2 }}</label>
+            <p>{{ questionarioExterno.qexterna2 }}</p>
+
+            <h2>Confiabilidade</h2>
+            
+            <label>{{ questionarioExterno.pexterna3 }}</label>
+            <p>{{ questionarioExterno.qexterna3 }}</p>
+           
+            <label>{{ questionarioExterno.pexterna4 }}</label>
+            <p>{{ questionarioExterno.qexterna4 }}</p>
+
+            <h2>Usabilidade</h2>
+          
+            <label>{{ questionarioExterno.pexterna5 }}</label>
+            <p>{{ questionarioExterno.qexterna5 }}</p>
+        
+            <label>{{ questionarioExterno.pexterna6 }}</label>
+            <p>{{ questionarioExterno.qexterna6 }}</p>
+
+            <h2>Eficiência de Desempenho</h2>
+           
+            <label>{{ questionarioExterno.pexterna7 }}</label>
+            <p>{{ questionarioExterno.qexterna7 }}</p>
+ 
+            <label>{{ questionarioExterno.pexterna8 }}</label>
+            <p>{{ questionarioExterno.qexterna8 }}</p>
+        </div>
+    </div>
+    <br><br><br>
+</body>
+</html>

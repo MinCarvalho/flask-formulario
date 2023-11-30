@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('add_formulario') }}">Formulario Interno</a></li>
+            <li><a href="{{ url_for('add_form_externo') }}">Formulario Externo</a></li>
+        </ul>
+    </nav>
+    
+
+    <div class="container">
+        <br><br><br>
+        <h2>Formulario Interno</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usuário</th>
+                    <th>Visualizar</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for questionario in questionarios %}
+                    <tr>
+                        <td>{{ questionario.nome }}</td>
+                        <td><a class="b3view" href="{{ url_for('formulario_detalhes', id=questionario.id) }}">Ver detalhes</a></td>
+                        <td class="actions">
+                            <div class="edit-delete-container">
+                                <a class="b1edit" href="{{ url_for('edit_formulario', id=questionario.id) }}">Editar</a>
+                                <a class="b2delete" href="{{ url_for('delete_formulario', id=questionario.id) }}">Excluir</a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+
+    <br><br><br>
+    <div class="container">
+        <br><br><br>
+        <h2>Formulario Externo</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usuário</th>
+                    <th>Visualizar</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for questionarioExterno in questionariosExternos %}
+                    <tr>
+                        <td>{{ questionarioExterno.nome }}</td>
+                        <td><a class="b3view" href="{{ url_for('form_externo_detalhes', id=questionarioExterno.id) }}">Ver detalhes</a></td>
+                        <td class="actions">
+                            <div class="edit-delete-container">
+                                <a class="b1edit" href="{{ url_for('edit_form_externo', id=questionarioExterno.id) }}">Editar</a>
+                                <a class="b2delete" href="{{ url_for('delete_form_externo', id=questionarioExterno.id) }}">Excluir</a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    
+</body>
+</html>

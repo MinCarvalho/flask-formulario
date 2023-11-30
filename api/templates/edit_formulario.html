@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Editar Formulário</title>
+</head>
+<body>
+    <br>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+            </ul>
+        </nav>
+        <h1>Editar Formulário</h1>
+    </header>
+
+    <div class="container">
+
+        <form method="POST" action="{{ url_for('edit_formulario', id=questionario.id) }}">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                <br><label for="nome">Nome:</label>
+                {{ form.nome(class="form-control") }}
+            </div>
+
+            <div class="form-group">
+                <h2>Manutenibilidade</h2>
+                <!--<label for="qinterna1">Em uma escala de 1 a 10, qual é a facilidade percebida para fazer atualizações no sistema?</label>-->
+                {{ form.pinterna1(class="form-control") }} <br>
+                {{ form.qinterna1(class="form-control") }} <br>
+
+                <!--<label for="qinterna2">Os desenvolvedores consideram que o código-fonte é bem estruturado e fácil de entender?</label>-->
+                {{ form.pinterna2(class="form-control") }} <br>
+                {{ form.qinterna2(class="form-control") }} <br>
+
+                <h2>Conformidade</h2>
+                <!--<label for="qinterna3">Quantas normas de código limpo e padrões financeiros reconhecidos são aplicados pelo sistema?</label>-->
+                {{ form.pinterna3(class="form-control") }} <br>
+                {{ form.qinterna3(class="form-control") }} <br>
+                
+                <!--<label for="qinterna4">Há feedback positivo dos colaboradores da empresa sobre a conformidade do sistema?</label>-->
+                {{ form.pinterna4(class="form-control") }} <br>
+                {{ form.qinterna4(class="form-control") }} <br>
+
+                <h2>Eficiência</h2>
+                <!--<label for="qinterna5">Qual é o tempo médio de processamento para concluir um registro no sistema?</label>-->
+                {{ form.pinterna5(class="form-control") }} <br>
+                {{ form.qinterna5(class="form-control") }} <br>
+
+                <!--<label for="qinterna6">Os usuários relatam alguma lentidão ou problemas de desempenho durante o uso do sistema?</label>-->
+                {{ form.pinterna6(class="form-control") }} <br>
+                {{ form.qinterna6(class="form-control") }} <br>
+
+                <h2>Confiabilidade</h2>
+                <!--<label for="qinterna7">Qual a porcentagem de precisão nas informações geradas pelo sistema?</label>-->
+                {{ form.pinterna7(class="form-control") }} <br>
+                {{ form.qinterna7(class="form-control") }} <br>
+
+                <!--<label for="qinterna8">Os usuários confiam nas informações fornecidas pelo sistema para tomar decisões?</label>-->
+                {{ form.pinterna8(class="form-control") }} <br>
+                {{ form.qinterna8(class="form-control") }} <br>
+
+            </div>
+
+            
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            </div>
+        </form>
+    </div>
+    <br><br><br>
+</body>
+</html>

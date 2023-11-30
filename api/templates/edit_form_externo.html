@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Editar Formulário</title>
+</head>
+<body>
+    <br>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+            </ul>
+        </nav>
+        <h1>Editar Formulário</h1>
+    </header>
+
+    <div class="container">
+
+        <form method="POST" action="{{ url_for('edit_form_externo', id=questionarioExterno.id) }}">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                <br><label for="nome">Nome:</label>
+                {{ form.nome(class="form-control") }}
+            </div>
+
+            <div class="form-group">
+                <h2>Funcionalidade</h2>
+                
+                {{ form.pexterna1(class="form-control") }} <br>
+                {{ form.qexterna1(class="form-control") }} <br>
+
+                
+                {{ form.pexterna2(class="form-control") }} <br>
+                {{ form.qexterna2(class="form-control") }} <br>
+
+                <h2>Confiabilidade</h2>
+                
+                {{ form.pexterna3(class="form-control") }} <br>
+                {{ form.qexterna3(class="form-control") }} <br>
+                
+               
+                {{ form.pexterna4(class="form-control") }} <br>
+                {{ form.qexterna4(class="form-control") }} <br>
+
+                <h2>Usabilidade</h2>
+                
+                {{ form.pexterna5(class="form-control") }} <br>
+                {{ form.qexterna5(class="form-control") }} <br>
+
+                
+                {{ form.pexterna6(class="form-control") }} <br>
+                {{ form.qexterna6(class="form-control") }} <br>
+
+                <h2>Eficiência de Desempenho</h2>
+               
+                {{ form.pexterna7(class="form-control") }} <br>
+                {{ form.qexterna7(class="form-control") }} <br>
+
+                
+                {{ form.pexterna8(class="form-control") }} <br>
+                {{ form.qexterna8(class="form-control") }} <br>
+
+            </div>
+
+            
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            </div>
+        </form>
+    </div>
+    <br><br><br>
+</body>
+</html>

@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffffc8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+nav {
+    padding: 10px;
+    width: 70%;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto; 
+}
+
+nav > ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+li{
+    cursor: pointer;
+    padding-right: 15px;
+}
+
+li > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+li > a:hover{
+    color: rgb(59, 69, 207);
+}
+
+
+h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+th {
+    width: 300px;
+    padding: 4px;
+    background-color: #000000; 
+    color: #ffffff;
+    font-weight: bold; 
+    text-align: center; 
+}
+
+td a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+    text-decoration: none;  
+    color: inherit;  
+    height: 100%;  
+}
+
+
+.edit-delete-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;  
+}
+
+.b1edit {
+    color: #0027b4;
+    padding: 0 10px;
+   
+}
+
+.b1edit:hover {
+    color:#0027b4ad;
+}
+
+.b2delete {
+    color: #a40000;
+    padding: 0 10px;
+    
+}
+
+.b2delete:hover {
+    color:#a40000b4;
+}
+
+.b3view{
+    color: rgb(23, 95, 2);
+    padding: 0 10px;
+   
+}
+
+.b3view:hover {
+    color:#26a400b7;
+}
+
+
+form {
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    align-self: flex-start;  
+}
+
+
+form h3 {
+    color: #181818;
+    margin-top: 20px;
+    align-self: flex-start;  
+}
+
+form textarea {
+    width: 780px;
+    background-color: #ffffff6e;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+}
+
+form input {
+    width: 762px;
+    align-self: flex-start;  
+    padding: 5px 10px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+.form-detalhe {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: #a40000;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #0027b4;
+}
+
+
+

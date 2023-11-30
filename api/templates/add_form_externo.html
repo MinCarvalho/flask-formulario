@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Formulário</title>
+    
+</head>
+<body> 
+    <br>
+    <header>  
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Formulario Externo</h1>
+        <form method="POST" action="{{ url_for('add_form_externo') }}">
+    
+            {{ form.csrf_token }}
+            {{ form.hidden_tag() }}
+            
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                {{ form.nome(class="form-control") }}
+            </div>
+            
+            <div class="form-group">
+                <!-- Interna -->
+                <h2>Interna</h2>
+        
+                <h3>Funcionalidade</h3>
+                <label>1.</label>
+                {{ form.pexterna1 }} <br> {{ form.qexterna1}} <br><br>
+                <label>2.</label>
+                {{ form.pexterna2 }} <br> {{ form.qexterna2 }}<br><br>
+        
+                <h3>Confiabilidade</h3>
+                <label>3.</label>
+                {{ form.pexterna3 }} <br> {{ form.qexterna3 }}<br><br>
+                <label>4.</label>
+                {{ form.pexterna4 }} <br> {{ form.qexterna4 }}<br><br>
+        
+                <h3>Usabilidade</h3>
+                <label>5.</label>
+                {{ form.pexterna5 }} <br> {{ form.qexterna5 }}<br><br>
+                <label>6.</label>
+                {{ form.pexterna6 }} <br> {{ form.qexterna6 }}<br><br>
+        
+                <h3>Eficiência de Desempenho</h3>
+                <label>7.</label>
+                {{ form.pexterna7 }} <br> {{ form.qexterna7 }}<br><br>
+                <label>8.</label>
+                {{ form.pexterna8 }} <br> {{ form.qexterna8 }}<br><br>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    
+
+    <br><br><br><br>
+</body>
+</html>

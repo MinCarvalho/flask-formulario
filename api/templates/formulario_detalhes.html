@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Detalhes do Questionário</title>
+</head>
+<body>
+
+    <br>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            
+        </ul>
+    </nav>
+    
+    <h1>DETALHES DO QUESTIONARIO</h1>
+
+    <div class="container">
+
+        <div class="form-detalhe">   
+            <p>{{ questionario.nome }}</p> <br><br>
+            <h2>Interno:</h2><br>
+            <h2>Manutenibilidade</h2>
+            <!--<label>Em uma escala de 1 a 10, qual é a facilidade percebida para fazer atualizações no sistema?</label>--> 
+            <label>{{ questionario.pinterna1 }}</label>
+            <p>{{ questionario.qinterna1 }}</p>
+            <!--<label>Os desenvolvedores consideram que o código-fonte é bem estruturado e fácil de entender?</label>--> 
+            <label>{{ questionario.pinterna2 }}</label>
+            <p>{{ questionario.qinterna2 }}</p>
+
+            <h2>Conformidade</h2>
+            <!--<label>Quantas normas de código limpo e padrões financeiros reconhecidos são aplicados pelo sistema?</label>--> 
+            <label>{{ questionario.pinterna3 }}</label>
+            <p>{{ questionario.qinterna3 }}</p>
+            <!--<label>Há feedback positivo dos colaboradores da empresa sobre a conformidade do sistema?</label>--> 
+            <label>{{ questionario.pinterna4 }}</label>
+            <p>{{ questionario.qinterna4 }}</p>
+
+            <h2>Eficiência</h2>
+            <!--<label>Qual é o tempo médio de processamento para concluir um registro no sistema?</label>--> 
+            <label>{{ questionario.pinterna5 }}</label>
+            <p>{{ questionario.qinterna5 }}</p>
+            <!--<label>Os usuários relatam alguma lentidão ou problemas de desempenho durante o uso do sistema?</label>--> 
+            <label>{{ questionario.pinterna6 }}</label>
+            <p>{{ questionario.qinterna6 }}</p>
+
+            <h2>Confiabilidade</h2>
+            <!--<label>Qual a porcentagem de precisão nas informações geradas pelo sistema?</label>--> 
+            <label>{{ questionario.pinterna7 }}</label>
+            <p>{{ questionario.qinterna7 }}</p>
+            <!--<label>Os usuários confiam nas informações fornecidas pelo sistema para tomar decisões?</label>--> 
+            <label>{{ questionario.pinterna8 }}</label>
+            <p>{{ questionario.qinterna8 }}</p>
+        </div>
+    </div>
+    <br><br><br>
+</body>
+</html>

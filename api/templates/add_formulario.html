@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Formulário</title>
+    <!-- Adicione os links para os estilos CSS se desejar -->
+</head>
+<body> 
+    <br>
+    <header>  
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Formulario</h1>
+        <form method="POST" action="{{ url_for('add_formulario') }}">
+    
+            {{ form.csrf_token }}
+            {{ form.hidden_tag() }}
+            
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                {{ form.nome(class="form-control") }}
+            </div>
+            
+            <div class="form-group">
+                <!-- Interna -->
+                <h2>Interna</h2>
+        
+                <h3>Manutenibilidade</h3>
+                <label>1.</label>
+                {{ form.pinterna1 }} <br> {{ form.qinterna1}} <br><br>
+                <label>2.</label>
+                {{ form.pinterna2 }} <br> {{ form.qinterna2 }}<br><br>
+        
+                <h3>Conformidade</h3>
+                <label>3.</label>
+                {{ form.pinterna3 }} <br> {{ form.qinterna3 }}<br><br>
+                <label>4.</label>
+                {{ form.pinterna4 }} <br> {{ form.qinterna4 }}<br><br>
+        
+                <h3>Eficiência</h3>
+                <label>5.</label>
+                {{ form.pinterna5 }} <br> {{ form.qinterna5 }}<br><br>
+                <label>6.</label>
+                {{ form.pinterna6 }} <br> {{ form.qinterna6 }}<br><br>
+        
+                <h3>Confiabilidade</h3>
+                <label>7.</label>
+                {{ form.pinterna7 }} <br> {{ form.qinterna7 }}<br><br>
+                <label>8.</label>
+                {{ form.pinterna8 }} <br>{{ form.qinterna8 }}<br><br>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    
+
+    <br><br><br><br>
+</body>
+</html>
